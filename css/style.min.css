@@ -644,7 +644,7 @@ body.is-open .l-header__nav {
 }
 
 .c-pageTitle__heading {
-  background-color: var(--sub-color1);
+  background-color: var(--sub-color2);
   height: 100px;
   display: flex;
   justify-content: center;
@@ -689,7 +689,7 @@ body.is-open .l-header__nav {
 }
 
 .c-footerNav {
-  background: var(--sub-color1);
+  background: var(--sub-color2);
 }
 .c-footerNav__list {
   display: flex;

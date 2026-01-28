@@ -6,6 +6,7 @@
   --gray1: #9A9A9A;
   --gray2: #4C524C;
   --sub-color2: #DAE2DB;
+  --sub-color3: #F0F5F0;
   --text-color: #333333;
   --white: #FFFFFF;
   --font-family-ja: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Meiryo", sans-serif;
@@ -689,7 +690,7 @@ body.is-open .l-header__nav {
 }
 
 .c-footerNav {
-  background: var(--sub-color2);
+  background: var(--sub-color3);
 }
 .c-footerNav__list {
   display: flex;

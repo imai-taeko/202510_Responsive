@@ -165,7 +165,7 @@
         &__list {
             display: grid;
 
-            /* Safari対策：flex由来の指定を無効化 */
+            /* 表示がうまくいかなかったので入れたSafari対策：flex由来の指定を無効化 */
             flex-direction: initial;
 
             grid-template-columns: repeat(2, 1fr);

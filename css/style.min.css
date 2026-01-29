@@ -1012,7 +1012,7 @@ body.is-open .l-header__nav {
 @media screen and (min-width: 768px) {
   .p-promise__list {
     display: grid;
-    /* Safari対策：flex由来の指定を無効化 */
+    /* 表示がうまくいかなかったので入れたSafari対策：flex由来の指定を無効化 */
     flex-direction: initial;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 32px;

@@ -935,12 +935,4 @@ body.is-open .l-header__nav {
      object-fit: cover;
   display: block;
   margin: 0 auto 8px;
-}
-@media screen and (min-width: 768px) {
-  .p-component__text {
-    text-align: center;
-  }
-  .p-component__text br {
-    display: block;
-  }
 }/*# sourceMappingURL=style.min.css.map */

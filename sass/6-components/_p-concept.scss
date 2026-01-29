@@ -67,13 +67,16 @@
     }
 
 
-    @include mq {
-        &__text {
-            text-align: center;
+    // @include mq {
+      //      &__text {
+        //       text-align: center;
+   // 
+          //      br {
+           //         display: block;
+            //    }
+        //    }
+      //  }
 
-            br {
-                display: block;
-            }
-        }
+
+
     }
-}

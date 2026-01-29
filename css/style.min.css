@@ -929,7 +929,7 @@ body.is-open .l-header__nav {
 .p-component__listItem img {
   width: 100%;
   max-width: 90%;
-  aspect-ratio: 1/1;
+  height: auto;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;

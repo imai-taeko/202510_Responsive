@@ -54,12 +54,13 @@
 
     &__listItem {
         text-align: center;
+
     }
 
     &__listItem img {
         width: 100%;
-        max-width: 90%; // 列幅に対する割合
-        aspect-ratio: 1 / 1;
+        max-width: 90%;
+        height: auto;
         border-radius: 50%;
         object-fit: cover;
         display: block;
@@ -67,16 +68,16 @@
     }
 
 
-    // @include mq {
-      //      &__text {
-        //       text-align: center;
-   // 
-          //      br {
-           //         display: block;
-            //    }
-        //    }
-      //  }
+    // いったん非表示　@include mq {
+    //      &__text {
+    //       text-align: center;
+    // 
+    //      br {
+    //         display: block;
+    //    }
+    //    }
+    //  }
 
 
 
-    }
+}

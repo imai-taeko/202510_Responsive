@@ -1007,4 +1007,13 @@ body.is-open .l-header__nav {
   font-size: 1.4rem;
   line-height: 1.8;
   font-family: var(--font-family-ja);
+}
+@media screen and (min-width: 768px) {
+  .p-promise__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+    row-gap: 40px;
+  }
 }/*# sourceMappingURL=style.min.css.map */

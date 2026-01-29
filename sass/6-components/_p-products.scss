@@ -1,0 +1,105 @@
+// Productsページ
+@use '../2-tools/mixin' as *;
+
+// メインビジュアルはコンポーネントの「ページタイトル」を使用
+// 背景画像は（img/products/page-title-product-list.webp）を使用
+
+// 製品一覧ここから
+.p-productItem {
+    padding-block: 64px;
+
+    .c-sectionTitle {
+        margin-bottom: 56px;
+
+
+        &__text {
+            font-size: 1.5rem;
+            margin-bottom: 32px;
+
+            p {
+                line-height: 1.7;
+
+                &:not(:first-child) {
+                    margin-top: 8px;
+                }
+            }
+
+            br {
+                display: none;
+            }
+        }
+    }
+
+    // 製品リスト
+
+    &__list {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__listItem {
+        position: relative; // カード配置基準（親）
+        list-style: none;
+        height: 420px; 
+        overflow: visible;
+    }
+
+    /* 上半分：背景画像 */
+    &__listImg {
+        height: 50%;
+        background-size: cover;
+        background-position: center;
+
+        &--type01 {
+            background-image: url(../img/products/item-lotion.webp);
+        }
+
+        &--type02 {
+            background-image: url(../img/products/item-milk.webp);
+        }
+
+        &--type03 {
+            background-image: url(../img/products/item-soap.webp);
+        }
+    }
+
+    /* 下半分：白背景 */
+    &__description {
+        height: 50%;
+        background: #fff;
+    }
+
+    /* 前面カード */
+    &__listDescription {
+        position: absolute;
+        top: 68%; // 境目あたり
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        background: rgba(255, 255, 255, 0.88); 
+        padding: 24px;
+        z-index: 2;
+    }
+
+    /* カード内要素 */
+    &__listTitle {
+        margin-bottom: 8px;
+        font-size: 1.6rem;
+    }
+
+    &__listText {
+        margin-bottom: 16px;
+        font-size: 1.4rem;
+        line-height: 1.6;
+    }
+
+    &__listLink {
+        display: inline-block;
+        padding: 8px 16px;
+        background: #000;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.3rem;
+        border-radius: 4px;
+    }
+}

@@ -123,6 +123,7 @@
         counter-increment: promise-counter; // ← 1ずつ増やす
     }
 
+    // 擬似要素の数字丸アイコン部分
     &__item::before {
         content: counter(promise-counter);
         position: absolute;

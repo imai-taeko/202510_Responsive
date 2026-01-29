@@ -160,15 +160,17 @@
         line-height: 1.8;
         font-family: var(--font-family-ja);
     }
-    
+
     @include mq {
         &__list {
             display: grid;
+
+            /* Safari対策：flex由来の指定を無効化 */
+            flex-direction: initial;
+
             grid-template-columns: repeat(2, 1fr);
-            column-gap: 32px;
-            row-gap: 40px;
+            gap: 40px 32px;
         }
     }
 
 }
-

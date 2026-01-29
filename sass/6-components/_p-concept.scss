@@ -68,16 +68,29 @@
     }
 
 
-    // いったん非表示　@include mq {
-    //      &__text {
-    //       text-align: center;
-    // 
-    //      br {
-    //         display: block;
-    //    }
-    //    }
-    //  }
+    @include mq {
+    &__text {
+        text-align: center;
 
+        br {
+            display: block;
+        }
+    }
+// 丸アイコン画像リスト部分（のPCレイアウト）
+    &__list {
+        max-width: 960px;
+        margin: 64px auto;
+        padding-inline: 0;
 
+        grid-template-columns: repeat(4, 1fr);
+        row-gap: 48px;
+        column-gap: 32px;
+    }
+
+    &__listItem img {
+        max-width: 100%;
+    }
+    // 丸アイコン画像リスト部分（のPCレイアウト）ここまで
+}
 
 }

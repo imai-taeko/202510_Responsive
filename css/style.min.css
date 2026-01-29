@@ -884,4 +884,63 @@ body.is-open .l-header__nav {
   .p-products__listItemTitle {
     text-align: center;
   }
+}
+
+.p-component {
+  padding-block: 64px;
+}
+.p-component .c-sectionTitle {
+  margin-bottom: 56px;
+}
+.p-component__text {
+  font-size: 1.5rem;
+  margin-bottom: 32px;
+}
+.p-component__text p {
+  line-height: 1.7;
+}
+.p-component__text p:not(:first-child) {
+  margin-top: 8px;
+}
+.p-component__text br {
+  display: none;
+}
+.p-component__link {
+  text-align: center;
+}
+.p-component__listtext {
+  font-size: 1.5rem;
+}
+.p-component__list {
+  list-style: none;
+  padding: 0;
+  margin: 48px auto;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 24px;
+  -moz-column-gap: 0;
+       column-gap: 0;
+  padding-inline: 14px;
+}
+.p-component__listItem {
+  text-align: center;
+}
+.p-component__listItem img {
+  width: 100%;
+  max-width: 90%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  margin: 0 auto 8px;
+}
+@media screen and (min-width: 768px) {
+  .p-component__text {
+    text-align: center;
+  }
+  .p-component__text br {
+    display: block;
+  }
 }/*# sourceMappingURL=style.min.css.map */

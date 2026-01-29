@@ -2,8 +2,78 @@
 @use '../2-tools/mixin' as *;
 
 // メインビジュアルはコンポーネントの「ページタイトル」を使用
-// 画像は（img/concept/page-title-concept.webp）を使用
+// 背景画像は（img/concept/page-title-concept.webp）を使用
+
+// コンポーネント
+.p-component {
+    padding-block: 64px;
+
+    .c-sectionTitle {
+        margin-bottom: 56px;
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        margin-bottom: 32px;
+
+        p {
+            line-height: 1.7;
+
+            &:not(:first-child) {
+                margin-top: 8px;
+            }
+        }
+
+        br {
+            display: none;
+        }
+    }
+
+    &__link {
+        text-align: center;
+    }
+
+    // 丸アイコン画像リスト部分
+    &__listtext {
+        font-size: 1.5rem;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 48px auto;
+        max-width: 100%;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 24px;
+        column-gap: 0;
+
+        padding-inline: 14px; // ← 外側余白はここで。
+    }
+
+    &__listItem {
+        text-align: center;
+    }
+
+    &__listItem img {
+        width: 100%;
+        max-width: 90%; // 列幅に対する割合
+        aspect-ratio: 1 / 1;
+        border-radius: 50%;
+        object-fit: cover;
+        display: block;
+        margin: 0 auto 8px;
+    }
 
 
+    @include mq {
+        &__text {
+            text-align: center;
 
-
+            br {
+                display: block;
+            }
+        }
+    }
+}

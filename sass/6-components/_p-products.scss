@@ -94,4 +94,106 @@
         display: block;
         margin-inline: auto;
     }
+
+
+    // ここからPCレイアウト
+    @include mq {
+
+        // レイアウト全体
+        &__listItem {
+
+            position: relative;
+            height: 420px; // PCでは固定高さに。
+            margin-bottom: 80px;
+            background: #fff;
+        }
+
+        &__listImg {
+            position: absolute;
+            top: 0;
+            width: 70%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        &__listDescription {
+            position: absolute;
+            top: 50%;
+            left: 8%;
+            transform: translateY(-50%);
+
+            width: 40%;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 32px;
+
+            // カード内テキストを左寄せにしていく
+            text-align: left;
+
+            // タイトルとサブテキストだけ横並びにする指定
+            .p-productItem__listHeader {
+                display: flex;
+                justify-content: space-between; // 左右に分ける
+                align-items: baseline;
+                margin-bottom: 12px;
+                border-bottom: 1px solid var(--text-color); // カード幅いっぱいに線
+                padding-bottom: 8px;
+            }
+
+            // SPスタイルのラインを無効に。
+            h3+p {
+                border-bottom: none;
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+
+            h3.p-productItem__listTitle {
+                text-align: left;
+                margin: 0;
+            }
+
+            p.p-productItem__listSub {
+                text-align: right;
+                margin: 0;
+            }
+
+            .p-productItem__listText {
+                margin-top: 0px;
+                text-align: left;
+            }
+
+            a.c-btn {
+                display: inline-block;
+                margin-top: 16px;
+            }
+
+
+        }
+
+
+        &__listItem:nth-child(odd) {
+
+            .p-productItem__listDescription {
+                left: auto; //安全のためリセットとして入れておく
+                right: 8%;
+            }
+
+            .p-productItem__listImg {
+                left: 0;
+            }
+        }
+
+        &__listItem:nth-child(even) {
+            .p-productItem__listDescription {
+                left: 8%;
+                right: auto; //安全のためリセットとして入れておく
+            }
+
+            .p-productItem__listImg {
+                right: 0;
+            }
+        }
+
+
+    }
 }

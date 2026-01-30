@@ -7,27 +7,10 @@
 // 製品一覧ここから
 .p-productItem {
     padding-block: 64px;
+    padding-bottom: 48px; //下側余白気になったので調整
 
     .c-sectionTitle {
         margin-bottom: 56px;
-
-
-        &__text {
-            font-size: 1.5rem;
-            margin-bottom: 32px;
-
-            p {
-                line-height: 1.7;
-
-                &:not(:first-child) {
-                    margin-top: 8px;
-                }
-            }
-
-            br {
-                display: none;
-            }
-        }
     }
 
     // 製品リスト
@@ -40,9 +23,11 @@
     &__listItem {
         position: relative; // カード配置基準（親）
         list-style: none;
-        height: 420px; 
+        height: 420px;
         overflow: visible;
+        margin-bottom: 16px;
     }
+
 
     /* 上半分：背景画像 */
     &__listImg {
@@ -63,43 +48,50 @@
         }
     }
 
-    /* 下半分：白背景 */
-    &__description {
-        height: 50%;
-        background: #fff;
-    }
 
     /* 前面カード */
     &__listDescription {
-        position: absolute;
-        top: 68%; // 境目あたり
+        position: absolute; // 親を基準にカード配置
+        top: 64%; // 境目あたり
         left: 50%;
         transform: translate(-50%, -50%);
         width: 90%;
-        background: rgba(255, 255, 255, 0.88); 
-        padding: 24px;
-        z-index: 2;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 8px 24px;
+        z-index: 1;
+
+        // ↓は、h3の直後にあるpだけに作用するスタイル（英字のサブテキスト）
+        h3+p {
+            font-size: 1.2rem;
+            text-align: center;
+            font-family: var(--font-family-en);
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--text-color);
+
+        }
+
+
     }
 
     /* カード内要素 */
     &__listTitle {
         margin-bottom: 8px;
         font-size: 1.6rem;
+        font-family: var(--font-family-ja);
+        text-align: center;
+
     }
 
     &__listText {
         margin-bottom: 16px;
         font-size: 1.4rem;
         line-height: 1.6;
+        font-family: var(--font-family-ja);
     }
 
-    &__listLink {
-        display: inline-block;
-        padding: 8px 16px;
-        background: #000;
-        color: #fff;
-        text-decoration: none;
-        font-size: 1.3rem;
-        border-radius: 4px;
+    .p-productItem__listDescription a {
+        display: block;
+        margin-inline: auto;
     }
 }

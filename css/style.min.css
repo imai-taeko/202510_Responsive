@@ -1270,6 +1270,10 @@ body.is-open .l-header__nav {
   font-weight: 600;
 }
 
+.p-productDetail__description dt .c-headingSub {
+  font-weight: 700 !important;
+}
+
 @media screen and (min-width: 768px) {
   .p-productDetail__description {
     padding-left: 32px;

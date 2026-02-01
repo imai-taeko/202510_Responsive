@@ -601,6 +601,22 @@ body.is-open .l-header__nav {
   background-color: var(--main-color);
 }
 
+.c-btn--round {
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--sub-color3);
+  border: none;
+}
+.c-btn--round::before {
+  background-color: var(--main-color) !important;
+}
+.c-btn--round:hover {
+  border-color: transparent;
+}
+.c-btn--round:hover::before {
+  background-color: var(--white) !important;
+}
+
 .c-sectionTitle {
   text-align: center;
   display: table;
@@ -1415,10 +1431,20 @@ body.is-open .l-header__nav {
   flex-direction: column;
   gap: 60px;
 }
+.p-shop__textGroup, .p-shop__mapGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.p-shop .c-headingSub {
+  font-weight: 700;
+}
 .p-shop__description {
   width: 100%;
+  text-align: center;
 }
 .p-shop__descriptionText {
+  text-align: start;
   font-size: 1.4rem;
   line-height: 1.8;
   margin-bottom: 40px;
@@ -1432,8 +1458,8 @@ body.is-open .l-header__nav {
   flex-direction: column;
 }
 .p-shop__listItem {
-  padding-bottom: 24px;
-  margin-bottom: 24px;
+  padding-bottom: 18px;
+  margin-bottom: 18px;
   border-bottom: 1px dotted var(--gray1);
 }
 .p-shop__listItem:last-child {
@@ -1452,4 +1478,64 @@ body.is-open .l-header__nav {
   color: var(--text-color);
   line-height: 1.6;
   margin-left: 0;
+}
+.p-shop__informationMap {
+  width: 100%;
+}
+.p-shop__informationMap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.p-shop__informationMapLink {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .p-shop {
+    padding: 0 0 100px 0;
+  }
+  .p-shop__information {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4%;
+  }
+  .p-shop__mapGroup {
+    width: 48%;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .p-shop__informationMapLink {
+    margin-top: 0;
+    text-align: right;
+    width: 100%;
+  }
+  .p-shop__textGroup {
+    width: 48%;
+    order: 2;
+    gap: 16px;
+  }
+  .p-shop__description {
+    text-align: left;
+    margin-top: -16px;
+  }
+  .p-shop__description .p-shop__descriptionText {
+    margin-bottom: 24px;
+  }
+  .p-shop__description .c-btn {
+    margin: 0;
+  }
+  .p-shop__listTitle {
+    margin-bottom: 0;
+    width: 120px;
+    flex-shrink: 0;
+  }
+  .p-shop__listItem {
+    display: flex;
+    align-items: baseline;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=style.min.css.map */

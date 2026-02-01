@@ -196,6 +196,31 @@
 // =================================================
 
 
+// ★★★ 角丸、電話番号ボタンスタイル追加
+// =================================================
+.c-btn--round {
+    border-radius: 8px; 
+    overflow: hidden; 
+    background-color: var(--sub-color3);
+    border: none;
+
+    // 通常時のアイコンの色をメインカラーに変更
+    &::before {
+        background-color: var(--main-color) !important;
+    }
+
+    &:hover {
+        border-color: transparent;
+        
+        // ホバー時は文字と一緒に白くなるように上書き
+        &::before {
+            background-color: var(--white) !important;
+        }
+    }
+}
+// =================================================
+
+
 // 見出し
 // ======================
 // セクション見出し

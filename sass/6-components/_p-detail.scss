@@ -6,92 +6,105 @@
 
 
 
-.p-productDetail__description {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    padding: 24px 24px 0px 24px; // 下だけ0pxにして詰める
-
-    font-family: var(--font-family-ja);
-    color: var(--text-color);
-}
-
-.p-productDetail__text {
-    font-size: 1.4rem;
-    line-height: 1.8;
-}
-
-.p-productDetail__titleJa {
-    font-size: 2rem;
-    font-weight: 600;
-}
-
-.p-productDetail__titleEn {
-    font-family: var(--font-family-en);
-    font-size: 1.4rem;
-    color: var(--gray1);
-    margin-top: -8px;
-}
-
-.p-productDetail__volume {
-    font-size: 1.3rem;
-    color: var(--gray2);
-    margin-bottom: 4px;
-}
-
-.p-productDetail__price {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: var(--main-color);
-    margin-top: 0;
-}
-
-.p-productDetail__description .c-btn {
-    margin-top: 24px;
-    align-self: center; 
-}
+.p-shop {
+    padding: 60px 0;
 
 
-// 使用方法ここから（l-columnsで制御しているのでメディアクエリは無し）
-.p-productDetail__description--dd {
-  margin: 16px 0 4px 0;
-  font-size: 1.4rem;
-  line-height: 1.8;
-  color: var(--text-color);
-}
+    &__information {
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
 
-
-.p-productDetail__description--dl dt {
-  font-weight: 600;
-
-}
-
-.p-productDetail__description dt .c-headingSub {
-    font-weight: 700 !important; // ちょっと太めに。強制的に。
-}
-
-// 使用方法ここまで
-
-
-
-@include mq {
-    // 写真画像とプライスのところ。横列に。
-    .p-productDetail__description {
-        padding-left: 32px;
-        gap: 14px;
     }
 
-    .p-productDetail__description .c-btn {
-        align-self: flex-start;
-        margin-top: 32px;
+    // --- 左側：ショップ説明エリア ---
+    &__description {
+        width: 100%;
+
+    
     }
 
-    .p-productDetail__titleJa {
-        font-size: 2.2rem;
+    &__descriptionTitle {
+        font-size: 2rem; // detailの見出し（2rem）に合わせる
+        font-weight: 600;
+        padding-bottom: 16px;
+        margin-bottom: 24px;
+        border-bottom: 2px solid var(--sub-color3);
+        color: var(--text-color);
+
     }
 
-    .p-productDetail__titleEn {
-        margin-top: -10px;
+    &__descriptionText {
+        font-size: 1.4rem; // detailの本文サイズに合わせる
+        line-height: 1.8;
+        margin-bottom: 40px;
+        color: var(--text-color);
     }
-    // 写真画像とプライスのところ。横列に。ここまで。
+
+    &__descriptionContact {
+        text-align: center;
+
+    }
+
+    &__tel {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        background-color: var(--sub-color3);
+        color: var(--text-color);
+        text-decoration: none;
+        padding: 20px 60px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 1.8rem; // detailの価格（1.8rem）程度のインパクトに
+        transition: opacity 0.3s, transform 0.2s;
+
+        &::before {
+            content: "";
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2373A776'%3E%3Cpath d='M17 1h-10c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-18c0-1.1-.9-2-2-2zm-5 20c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5.25-3h-10.5v-13h10.5v13z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &:hover {
+            opacity: 0.8;
+            transform: translateY(-2px);
+        }
+    }
+
+    // --- 右側：詳細リストエリア ---
+    &__informationDetail {
+        width: 100%;
+
+    }
+
+    &__listItem {
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px dotted var(--gray1);
+
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__listTitle {
+        font-weight: 600;
+        font-size: 1.4rem; // detailの重要項目サイズ
+        margin-bottom: 12px;
+        color: var(--text-color);
+    }
+
+    &__listData {
+        font-size: 1.4rem; // 本文サイズ
+        color: var(--text-color);
+        line-height: 1.6;
+        margin-left: 0;
+    }
 }

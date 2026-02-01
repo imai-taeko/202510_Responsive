@@ -1,0 +1,70 @@
+// Shopページ
+@use '../2-tools/mixin' as *;
+
+// メインビジュアルはコンポーネントの「ページタイトル」を使用
+// 背景画像は（img/shop/page-title-shop.webp）を使用
+
+// 見出しのした余白調整
+.p-component {
+    padding-bottom: 0; // 下側の余白をゼロに
+}
+
+// 店舗詳細情報スタイルここから
+.p-shop {
+    padding: 0 0 60px 0;
+
+    &__information {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    // --- ショップ説明エリア ---
+    &__description {
+        width: 100%;
+        
+    }
+
+    &__descriptionText {
+        font-size: 1.4rem;
+        line-height: 1.8;
+        margin-bottom: 40px;
+        color: var(--text-color);
+    }
+
+    // --- 詳細リストエリア ---
+    &__informationDetail {
+        width: 100%;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__listItem {
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+        border-bottom: 1px dotted var(--gray1);
+
+        &:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    &__listTitle {
+        font-weight: 600;
+        font-size: 1.4rem;
+        margin-bottom: 12px;
+        color: var(--text-color);
+    }
+
+    &__listData {
+        font-size: 1.4rem;
+        color: var(--text-color);
+        line-height: 1.6;
+        margin-left: 0;
+    }
+}

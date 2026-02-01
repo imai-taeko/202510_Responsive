@@ -93,43 +93,110 @@
                 </h2>
 
                 <!-- 製品詳細エリア -->
-                <div class="p-productDetail">
-                    <img src="img/products-detail/detail-lotion.webp" alt="" class="p-productDetail__img">
+<div class="l-columns l-columns--between">
+
+    <!-- 画像 -->
+    <div class="l-columns__col12 l-columns__col6--pc">
+        <div class="p-productDetail">
+            <img src="img/products-detail/detail-lotion.webp"
+                 alt=""
+                 class="p-productDetail__img">
+        </div>
+    </div>
+
+    <!-- 説明文 -->
+    <div class="l-columns__col12 l-columns__col6--pc">
+        <div class="p-productDetail__description">
+            <p class="p-productDetail__text">
+                植物エキスが肌をきめ細やかに整え滑らかにし、たっぷりと潤いを与えます。
+            </p>
+
+            <h2 class="p-productDetail__title p-productDetail__titleJa">
+                敏感肌用化粧水
+            </h2>
+
+            <p class="p-productDetail__titleEn">Lotion</p>
+
+            <p class="p-productDetail__volume">250ml</p>
+            <p class="p-productDetail__price">3,000円（外税）</p>
+
+            <a href="#"
+               class="c-btn c-btn--icon c-btn--accent c-btn--cart c-btn--invert"
+               target="_blank">
+                Online Shop
+            </a>
+        </div>
+    </div>
+
+</div>
+<!-- 製品詳細エリアここまで -->
+
+
+<!-- 使用方法ここから -->
+<div class="p-productDetail__description">
+  <div class="l-columns l-columns--between">
+    <div class="l-columns__col12 l-columns__col6--pc">
+      <dt class="c-headingSub">使用方法</dt>
+      <dd class="p-productDetail__description--dd">
+        メイクを落とした肌に使用して下さい。適量を手に取り手のひらで温めるように広げてから、顔全体になじませてください。乾燥が気になる場合は重ねづけをすると、さらに保湿力が高まります。
+      </dd>
+    </div>
+    <div class="l-columns__col12 l-columns__col6--pc">
+      <dt class="c-headingSub">特徴</dt>
+      <dd class="p-productDetail__description--dd">
+        とろみのある濃厚なテクスチャー。べたつかず浸透し、潤い肌が続きます。ローズエッセンシャルオイルの華やかな深い香りが、心も肌も心地よく包み込みます。
+      </dd>
+    </div>
+  </div>
+</div>
+<!-- 使用方法ここまで -->
+
+</section>
+
+<section class="p-products">
+            <div class="l-container">
+                <h2 class="c-sectionTitle">
+                    <span class="c-sectionTitle__ja">製品一覧</span>
+                    <span class="c-sectionTitle__en">Products</span>
+                </h2>
+
+                <div class="l-columns p-products__list">
+                    <div class="l-columns__col4--pc">
+                        <div class="p-products__listItem">
+                            <a href="detail.html">
+                                <img src="img/common/product-list-lotion.webp" alt="" class="p-products__listItemImg">
+                                <p class="p-products__listItemTitle">
+                                    敏感肌用化粧水
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="l-columns__col4--pc">
+                        <div class="p-products__listItem">
+                            <a href="detail.html">
+                                <img src="img/common/product-list-milk.webp" alt="" class="p-products__listItemImg">
+                                <p class="p-products__listItemTitle">
+                                    敏感肌用乳液
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="l-columns__col4--pc">
+                        <div class="p-products__listItem">
+                            <a href="detail.html">
+                                <img src="img/common/product-list-soap.webp" alt="" class="p-products__listItemImg">
+                                <p class="p-products__listItemTitle">
+                                    ハンドメイドソープ
+                                </p>
+                            </a>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="p-productDetail__description">
-                    <p class="p-productDetail__text">
-                        植物エキスが肌をきめ細やかに整え滑らかにし、たっぷりと潤いを与えます。
-                    </p>
-                    <h2 class="p-productDetail__title p-productDetail__titleJa">
-                        敏感肌用化粧水
-                    </h2>
-                    <p class="p-productDetail__titleEn">
-                        Lotion</p>
-                    <p class="p-productDetail__volume">250ml</p>
-                    <p class="p-productDetail__price">3,000円（外税）</p>
-                    <a href="" class="p-productDetail__link">
-                        ボタンが入る
-                    </a>
+                <div class="p-products__link">
+                    <a href="products.html" class="c-btn c-btn--icon c-btn--outerlink">Products</a>
                 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            </div>
         </section>
 
 
@@ -145,7 +212,7 @@
                 <span class="c-sectionTitle__ja">オンラインショップ</span>
                 <span class="c-sectionTitle__en">Online shop</span>
             </h2>
-            <a href="#" class="c-btn c-btn--white c-btn--icon c-btn--outerlink" target="_blank">Online Shop</a>
+            <a href="#" class="c-btn c-btn--white c-btn--icon c-btn--cart c-btn--shadeDown" target="_blank">Online Shop</a>
         </section>
 
     </main>

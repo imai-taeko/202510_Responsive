@@ -16,11 +16,10 @@
             margin-block: 40px;
         }
 
-    [class*="l-columns__col"] {
-        outline: 1px solid orange;
-        background-color: rgba(255, 165, 0 .2);
-    }
-
+        [class*="l-columns__col"] {
+            outline: 1px solid orange;
+            background-color: rgba(255, 165, 0 .2);
+        }
     </style>
     <script src="js/script.js" defer></script>
 </head>
@@ -111,6 +110,18 @@
     <a href="#" class="c-btn c-btn--white c-btn--icon c-btn--cart">Button</a>
     <a href="#" class="c-btn c-btn--icon c-btn--accent c-btn--cart">Button</a>
 
+    <!-- ボタン・バリエーションテスト -->
+    <h3>ボタン・バリエーション</h3>
+    白から半透明・アイコン付き。使わないかも（シェードアニメはしない）<a href="#" class="c-btn c-btn--icon c-btn--cart c-btn--hoverTrans">
+        Button
+    </a>
+    <br><br>
+    半透明ボタンに上から緑のシェードが降りてくる<a href="#" class="c-btn c-btn--white c-btn--icon c-btn--cart c-btn--shadeDown">Button</a><br><br>
+
+    元緑ボタンをhover時白ボタンにする。<a href="#" class="c-btn c-btn--icon c-btn--accent c-btn--cart c-btn--invert">Button</a>
+
+    <!-- ボタン・バリエーションテスト ここまで-->
+
     <h3>見出し</h3>
     <h2 class="c-sectionTitle">
         <span class="c-sectionTitle__ja">タイトル</span>
@@ -152,7 +163,8 @@
             <li class="c-footerNav__listItem"><a href="#">Products</a></li>
             <li class="c-footerNav__listItem"><a href="#">Faq</a></li>
             <li class="c-footerNav__listItem"><a href="#">Shop</a></li>
-            <li class="c-footerNav__listItem"><a href="#" target="_blank" class="c-footerNav__outerLink">Online Shop</a></li>
+            <li class="c-footerNav__listItem"><a href="#" target="_blank" class="c-footerNav__outerLink">Online Shop</a>
+            </li>
         </ul>
     </nav>
 

@@ -6,3 +6,87 @@
 
 
 
+.p-productDetail__description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px 24px 0px 24px; // 下だけ0pxにして詰める
+
+    font-family: var(--font-family-ja);
+    color: var(--text-color);
+}
+
+.p-productDetail__text {
+    font-size: 1.4rem;
+    line-height: 1.8;
+}
+
+.p-productDetail__titleJa {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.p-productDetail__titleEn {
+    font-family: var(--font-family-en);
+    font-size: 1.4rem;
+    color: var(--gray1);
+    margin-top: -8px;
+}
+
+.p-productDetail__volume {
+    font-size: 1.3rem;
+    color: var(--gray2);
+    margin-bottom: 4px;
+}
+
+.p-productDetail__price {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-top: 0;
+}
+
+.p-productDetail__description .c-btn {
+    margin-top: 24px;
+    align-self: center; 
+}
+
+
+// 使用方法ここから（l-columnsで制御しているのでメディアクエリは無し）
+.p-productDetail__description--dd {
+  margin: 16px 0 4px 0;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: var(--text-color);
+}
+
+
+.p-productDetail__description--dl dt {
+  font-weight: 600;
+
+}
+// 使用方法ここまで
+
+
+
+@include mq {
+    // 写真画像とプライスのところ。横列に。
+    .p-productDetail__description {
+        padding-left: 32px;
+        gap: 14px;
+    }
+
+    .p-productDetail__description .c-btn {
+        align-self: flex-start;
+        margin-top: 32px;
+    }
+
+    .p-productDetail__titleJa {
+        font-size: 2.2rem;
+    }
+
+    .p-productDetail__titleEn {
+        margin-top: -10px;
+    }
+    // 写真画像とプライスのところ。横列に。ここまで。
+}

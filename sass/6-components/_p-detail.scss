@@ -4,107 +4,113 @@
 // メインビジュアルはコンポーネントの「ページタイトル」を使用
 // 背景画像は（img/products-detail/page-title-product-detail.webp）を使用
 
+// --- 製品詳細エリア：右側テキストブロック ---
+.p-productDetail__description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px; // 上下左右に適切な余白
 
+    font-family: var(--font-family-ja);
+    color: var(--text-color);
+}
 
-.p-shop {
-    padding: 60px 0;
+.p-productDetail__text {
+    font-size: 1.4rem;
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
 
+.p-productDetail__titleJa {
+    font-size: 2rem;
+    font-weight: 600;
+}
 
-    &__information {
-        display: flex;
-        flex-direction: column;
-        gap: 64px;
+.p-productDetail__titleEn {
+    font-family: var(--font-family-en);
+    font-size: 1.6rem;
+    color: var(--gray1); 
+    margin-top: -12px; 
+}
 
-    }
+.p-productDetail__volume {
+    font-size: 1.3rem;
+    color: var(--gray2);
+    margin-top: 8px;
+}
 
-    // --- 左側：ショップ説明エリア ---
-    &__description {
-        width: 100%;
+.p-productDetail__price {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--main-color); 
+    margin-top: 0;
 
     
-    }
-
-    &__descriptionTitle {
-        font-size: 2rem; // detailの見出し（2rem）に合わせる
-        font-weight: 600;
-        padding-bottom: 16px;
-        margin-bottom: 24px;
-        border-bottom: 2px solid var(--sub-color3);
-        color: var(--text-color);
-
-    }
-
-    &__descriptionText {
-        font-size: 1.4rem; // detailの本文サイズに合わせる
-        line-height: 1.8;
-        margin-bottom: 40px;
+    span {
+        font-size: 1.6rem;
+        font-weight: 400;
+        margin-left: 4px;
         color: var(--text-color);
     }
+}
 
-    &__descriptionContact {
-        text-align: center;
+// ボタンの配置（説明文エリア内）
+.p-productDetail__description .c-btn {
+    margin-top: 24px;
+    align-self: center; // スマホでは中央寄せ
+}
 
+// --- 使用方法・特徴セクション ---
+.p-productDetail__description--dd {
+    margin: 16px 0 4px 0;
+    font-size: 1.4rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.p-productDetail__description dt .c-headingSub {
+    font-weight: 700 !important; // 視認性を高めるため太字に固定
+}
+
+// --- セクション間の余白調整 ---
+.p-productItem {
+    padding-bottom: 40px; // 下側の余白を少し詰める
+}
+
+.p-products {
+    padding-top: 40px; // 上側の余白を詰める
+    
+    // 見出し自体のマージンをリセット
+    .c-sectionTitle {
+        margin-top: 0;
+    }
+}
+
+
+// --- PC用スタイル（メディアクエリ） ---
+@include mq {
+    .p-productDetail__description {
+        padding-top: 0;     // ★スマホ版の上の余白(24px)をゼロにする
+        padding-left: 48px; 
+        margin-top: -10px;   // ★画像の上辺と視覚的に揃えるための微調整
+        gap: 14px;
     }
 
-    &__tel {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        background-color: var(--sub-color3);
-        color: var(--text-color);
-        text-decoration: none;
-        padding: 20px 60px;
-        border-radius: 12px;
-        font-weight: 600;
-        font-size: 1.8rem; // detailの価格（1.8rem）程度のインパクトに
-        transition: opacity 0.3s, transform 0.2s;
-
-        &::before {
-            content: "";
-            display: inline-block;
-            width: 26px;
-            height: 26px;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2373A776'%3E%3Cpath d='M17 1h-10c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-18c0-1.1-.9-2-2-2zm-5 20c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5.25-3h-10.5v-13h10.5v13z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-
-        &:hover {
-            opacity: 0.8;
-            transform: translateY(-2px);
-        }
+    .p-productDetail__description .c-btn {
+        align-self: flex-start; // PCでは左寄せ
+        margin-top: 32px;
     }
 
-    // --- 右側：詳細リストエリア ---
-    &__informationDetail {
-        width: 100%;
-
+    .p-productDetail__titleJa {
+        font-size: 1.8rem;
     }
 
-    &__listItem {
-        padding-bottom: 24px;
-        margin-bottom: 24px;
-        border-bottom: 1px dotted var(--gray1);
-
-        &:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
+    .p-productDetail__titleEn {
+        font-size: 1.8rem;
+        margin-top: -10px;
     }
 
-    &__listTitle {
-        font-weight: 600;
-        font-size: 1.4rem; // detailの重要項目サイズ
-        margin-bottom: 12px;
-        color: var(--text-color);
-    }
-
-    &__listData {
-        font-size: 1.4rem; // 本文サイズ
-        color: var(--text-color);
-        line-height: 1.6;
-        margin-left: 0;
+    .p-productDetail__price {
+        font-size: 1.6rem; 
     }
 }

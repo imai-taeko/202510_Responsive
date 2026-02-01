@@ -1,0 +1,121 @@
+// FAQページ
+@use '../2-tools/mixin' as *;
+
+// メインビジュアルはコンポーネントの「ページタイトル」を使用
+// 背景画像は（img/faq/page-title-faq.webp）を使用
+
+
+// ここからアコーディオン部分のスタイル指定
+// ==================================================
+
+.p-faq {
+    padding-top: 20px;
+    padding-bottom: 80px;
+}
+
+// 直前のテキストセクションの余白をリセット
+.p-component__text {
+    margin-bottom: 0; // ブラウザや既存CSSで余白がついている場合のため
+}
+
+.p-component {
+    padding-bottom: 32px; /* 余白調整 */
+}
+
+.p-faq__list {
+    max-width: 800px;
+    margin: 0 auto;
+    list-style: none;
+    padding: 0;
+}
+
+.p-faq__listItem {
+    margin-bottom: 20px; 
+}
+
+.p-faq__listQ {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--sub-color3);
+    cursor: pointer;
+}
+
+/* 共通テキスト設定 */
+.p-faq__text {
+    padding: 1.5rem 2rem;
+    font-size: 1.6rem;
+    color: var(--gray2); // 質問文の色
+    line-height: 1.6;
+    margin: 0;
+    font-family: var(--font-family-ja);
+}
+
+/* ボタン部分 */
+.p-faq__listBtn {
+    width: 60px;
+    height: 60px;
+    background-color: var(--main-color);
+    position: relative;
+    border: none;
+    flex-shrink: 0;
+    pointer-events: none;
+}
+
+/* ＋とーの描画 */
+.p-faq__listBtn::before,
+.p-faq__listBtn::after {
+    content: "";
+    position: absolute;
+    background-color: var(--white);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* 横線 */
+.p-faq__listBtn::before {
+    width: 2rem; // 20px
+    height: 0.2rem; // 2px
+}
+
+/* 縦線 */
+.p-faq__listBtn::after {
+    width: 0.2rem; // 2px
+    height: 2rem; // 20px
+}
+
+/* アクティブ時のスタイル */
+.p-faq__listItem.is-open .p-faq__listBtn::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+    opacity: 0;
+}
+
+/* 回答部分（Gridアニメーション） */
+.p-faq__listA {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.3s ease, visibility 0.3s ease;
+    visibility: hidden;
+}
+
+.p-faq__listItem.is-open .p-faq__listA {
+    grid-template-rows: 1fr;
+    visibility: visible;
+}
+
+.p-faq__listAInner {
+    overflow: hidden;
+}
+
+/* 回答文専用のスタイル調整 */
+.p-faq__listA .p-faq__text {
+    color: var(--text-color);
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+// ここまで。アコーディオン部分のスタイル指定
+// ==================================================
+// メディアクエリでのPCスタイル指定は不要。きちんと見える。

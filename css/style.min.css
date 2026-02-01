@@ -1306,10 +1306,13 @@ body.is-open .l-header__nav {
 
 @media screen and (min-width: 768px) {
   .p-productDetail__description {
+    padding-left: 8px;
     padding-top: 0;
-    padding-left: 48px;
     margin-top: -10px;
     gap: 14px;
+  }
+  .p-productDetail__description .l-columns__col6--pc {
+    margin-top: 32px;
   }
   .p-productDetail__description .c-btn {
     align-self: flex-start;

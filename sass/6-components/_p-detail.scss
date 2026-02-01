@@ -90,10 +90,14 @@
 // --- PC用スタイル（メディアクエリ） ---
 @include mq {
     .p-productDetail__description {
+        padding-left: 8px;
         padding-top: 0;     // ★スマホ版の上の余白(24px)をゼロにする
-        padding-left: 48px; 
         margin-top: -10px;   // ★画像の上辺と視覚的に揃えるための微調整
         gap: 14px;
+    }
+
+    .p-productDetail__description .l-columns__col6--pc {
+        margin-top: 32px; // 上にスペースを追加
     }
 
     .p-productDetail__description .c-btn {
